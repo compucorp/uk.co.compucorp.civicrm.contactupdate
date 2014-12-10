@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<extension key="uk.co.compucorp.civicrm.contactupdate" type="module">
+  <file>contactupdate</file>
+  <name>Contact Update Request</name>
+  <description>Add an action in contact summary page for request contact detail update</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Guanhuan Chen</author>
+    <email>info@compucorp.co.uk</email>
+  </maintainer>
+  <releaseDate>2014-12-10</releaseDate>
+  <version>1.0</version>
+  <develStage>stable</develStage>
+  <compatibility>
+    <ver>4.2</ver>
+  </compatibility>
+  <comments></comments>
+  <civix>
+    <namespace>CRM/Contactupdate</namespace>
+  </civix>
+</extension>
