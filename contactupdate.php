@@ -124,9 +124,9 @@ function contactupdate_civicrm_summaryActions( &$actions, $contactID ){
         'permissions' => array( 0 => 'edit all contacts')
     );
     if($contact['contact_type']=='Workplace'){
-      $actions['request']['href'] = "/workplace/update_contact_details?cid2=".$contactID;
-    }else{
       $actions['request']['href'] = "/workplace/update_workplace_details?cid2=".$contactID;
+    }else{
+      $actions['request']['href'] = "/workplace/update_contact_details?cid2=".$contactID;
     }
     
 }
