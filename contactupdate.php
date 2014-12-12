@@ -120,8 +120,7 @@ function contactupdate_civicrm_summaryActions( &$actions, $contactID ){
         'weight' => 99,
         'class' => 'no-popup',
         'ref' => 'request-update',
-        'key' => 'request',
-        'permissions' => array( 0 => 'edit all contacts')
+        'key' => 'request'
     );
     if($contact['contact_type']=='Organization'){
       $actions['request']['href'] = "/workplace/update_workplace_details?cid2=".$contactID;
