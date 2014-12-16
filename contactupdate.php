@@ -125,10 +125,10 @@ function contactupdate_civicrm_summaryActions( &$actions, $contactID ){
     if($contact['contact_type']=='Organization'){
       $actions['request']['href'] = "/workplace/update_workplace_details?cid2=".$contactID;
     }else{
+      $workplace_search = civicrm_api3('Relationship', 'get', array('contact_id_a' => $contactID, 'relationship_type_id' => 11));
       if($workplace_search['count']>0){
-        $workplace_search = civicrm_api3('Relationship', 'get', array('contact_id_a' => $contactID, 'relationship_type_id' => 11));
 	$workplace = array_pop($workplace_search['values']);
-	$actions['request']['href'] = "/workplace/update_contact_details?cid2=".$contactID."cid3=".$workplace['id'];
+	$actions['request']['href'] = "/workplace/update_contact_details?cid2=".$contactID."&cid3=".$workplace['contact_id_b'];
       }else{
         $actions['request']['href'] = "/workplace/update_contact_details?cid2=".$contactID;
       }
